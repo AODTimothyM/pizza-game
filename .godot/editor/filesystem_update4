@@ -1,0 +1,9 @@
+res://README.md
+res://game.tscn
+res://game.gd
+res://MainMenu.gd
+res://player.tscn
+res://world.tscn
+res://DeleteLater.gd
+res://player.gd
+res://world.gd

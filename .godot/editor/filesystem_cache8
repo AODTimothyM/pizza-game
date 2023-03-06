@@ -1,4 +1,36 @@
 2a60927148abd1d33b818b535e306557
-::res://::1678128181
+::res://::1678134987
+game.gd::GDScript::-1::1678134450::0::1::::<>Node<>::
+game.tscn::PackedScene::1264764871258903647::1678134453::0::1::::<><>::res://game.gd
 icon.svg::CompressedTexture2D::7871504431197700417::1678127602::1678127620::1::::<><>::
-README.md::TextFile::-1::1678128089::0::1::::<><>::
+README.md::TextFile::-1::1678134381::0::1::::<><>::
+::res://Sample Sprites/::1678134991
+Bridge.png::CompressedTexture2D::6274253603461029618::1678134991::1678134992::1::::<><>::
+Canopy.png::CompressedTexture2D::273539837992226279::1678134991::1678134992::1::::<><>::
+Cliffs.png::CompressedTexture2D::3737049410075789229::1678134991::1678134992::1::::<><>::
+Flowers (Old).png::CompressedTexture2D::5386519921098939576::1678134991::1678134992::1::::<><>::
+Flowers.png::CompressedTexture2D::2557325953748933701::1678134991::1678134992::1::::<><>::
+Forest Tileset.png::CompressedTexture2D::2260475239712016158::1678134991::1678134992::1::::<><>::
+Forgotten Canopy.png::CompressedTexture2D::6624879557797000267::1678134991::1678134992::1::::<><>::
+Forgotten Leaves.png::CompressedTexture2D::8720802574412710019::1678134991::1678134992::1::::<><>::
+Forgotten Trunk.png::CompressedTexture2D::583890084833404056::1678134991::1678134992::1::::<><>::
+Forgotten.png::CompressedTexture2D::6022654690921318271::1678134991::1678134992::1::::<><>::
+Grass Background.png::CompressedTexture2D::3500719726118715573::1678134991::1678134992::1::::<><>::
+Hopscotch.png::CompressedTexture2D::6547794525684136671::1678134991::1678134992::1::::<><>::
+Leaves.png::CompressedTexture2D::4019736926534728740::1678134991::1678134992::1::::<><>::
+MyRoom.png::CompressedTexture2D::7111266950772981172::1678134991::1678134992::1::::<><>::
+Path.png::CompressedTexture2D::6297592111601384948::1678134991::1678134992::1::::<><>::
+PineTree.png::CompressedTexture2D::3883083178556292748::1678134991::1678134992::1::::<><>::
+Realm.png::CompressedTexture2D::502384157995066286::1678134991::1678134992::1::::<><>::
+RealmPathway.png::CompressedTexture2D::8574582255211108354::1678134991::1678134992::1::::<><>::
+Space.png::CompressedTexture2D::8789331806785426677::1678134991::1678134992::1::::<><>::
+Stairs.png::CompressedTexture2D::5918035803853185910::1678134991::1678134992::1::::<><>::
+Street.png::CompressedTexture2D::6819691295657482194::1678134991::1678134992::1::::<><>::
+Tree.png::CompressedTexture2D::1090059025295933405::1678134991::1678134992::1::::<><>::
+Trees.png::CompressedTexture2D::2779151638560531677::1678134991::1678134992::1::::<><>::
+Trunk.png::CompressedTexture2D::9138468783471547807::1678134991::1678134992::1::::<><>::
+Water1.png::CompressedTexture2D::7319116971591629445::1678134991::1678134992::1::::<><>::
+Water2.png::CompressedTexture2D::3637766613631260983::1678134991::1678134992::1::::<><>::
+Water3.png::CompressedTexture2D::7842730312216679744::1678134991::1678134992::1::::<><>::
+Water.png::CompressedTexture2D::2584679686162036033::1678134991::1678134992::1::::<><>::
+WilhelmActor.png::CompressedTexture2D::4202899879060138839::1678134991::1678134992::1::::<><>::
