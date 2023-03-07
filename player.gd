@@ -46,8 +46,8 @@ func walkState(delta):
 	if Input_vector != Vector2.ZERO:
 		velocity = velocity.move_toward(Input_vector * maxSpeed, acceleration * delta)
 		animationPlayer.play("Walk")
-		if Input.is_action_pressed("left"): sprite.flip_h = true
-		elif Input.is_action_pressed("right"): sprite.flip_h = false
+		if Input.is_action_pressed("left"): sprite.flip_h = true #true
+		elif Input.is_action_pressed("right"): sprite.flip_h = false #false
 		#if !walkEffect.playing: walkEffect.play()
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)

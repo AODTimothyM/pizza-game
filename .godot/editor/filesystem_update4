@@ -4,3 +4,4 @@ res://World/world.tscn
 res://MainMenu.gd
 res://game.gd
 res://TitleMenu.gd
+res://player.gd
