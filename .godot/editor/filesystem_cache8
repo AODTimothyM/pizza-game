@@ -1,10 +1,17 @@
 2a60927148abd1d33b818b535e306557
-::res://::1678134987
-game.gd::GDScript::-1::1678134450::0::1::::<>Node<>::
-game.tscn::PackedScene::1264764871258903647::1678134453::0::1::::<><>::res://game.gd
+::res://::1678217601
+FreddyLaugh.mp3::AudioStreamMP3::4308708176357918558::1678214180::1678214222::1::::<><>::
+game.gd::GDScript::-1::1678209971::0::1::::<>Node<>::
+game.tscn::PackedScene::8040448349039747785::1678217601::0::1::::<><>::res://game.gd<>uid://c61lw41jbaum4<>res://TitleMenu.gd
+GirlLaugh.mp3::AudioStreamMP3::4118838165761431016::1678214253::1678214260::1::::<><>::
 icon.svg::CompressedTexture2D::7871504431197700417::1678127602::1678127620::1::::<><>::
+player.gd::GDScript::-1::1678157467::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::3244490311171965930::1678217601::0::1::::<><>::res://player.gd<>uid://1rkniprgw6m
 README.md::TextFile::-1::1678134381::0::1::::<><>::
-::res://Sample Sprites/::1678134991
+TitleMenu.gd::GDScript::-1::1678215089::0::1::::<>Control<>::
+::res://Player/::1678156899
+Sam.png::CompressedTexture2D::54724564288131618::1678155869::1678155869::1::::<><>::
+::res://Sample Sprites/::1678134992
 Bridge.png::CompressedTexture2D::6274253603461029618::1678134991::1678134992::1::::<><>::
 Canopy.png::CompressedTexture2D::273539837992226279::1678134991::1678134992::1::::<><>::
 Cliffs.png::CompressedTexture2D::3737049410075789229::1678134991::1678134992::1::::<><>::
@@ -34,3 +41,7 @@ Water2.png::CompressedTexture2D::3637766613631260983::1678134991::1678134992::1:
 Water3.png::CompressedTexture2D::7842730312216679744::1678134991::1678134992::1::::<><>::
 Water.png::CompressedTexture2D::2584679686162036033::1678134991::1678134992::1::::<><>::
 WilhelmActor.png::CompressedTexture2D::4202899879060138839::1678134991::1678134992::1::::<><>::
+::res://World/::1678217602
+Walls.png::CompressedTexture2D::7234628261056160596::1678219817::1678219818::1::::<><>::
+world.gd::GDScript::-1::1678140324::0::1::::<>Node2D<>::
+world.tscn::PackedScene::7003078079909446709::1678217602::0::1::::<><>::res://World/world.gd<>uid://dbcrjgwpa5t61

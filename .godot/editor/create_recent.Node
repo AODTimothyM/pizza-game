@@ -1,3 +1,15 @@
+AudioStreamPlayer
+HSlider
+VSlider
+CheckBox
+HBoxContainer
+Button
+VBoxContainer
+LineEdit
+Control
+TileMap
+CollisionShape2D
+AnimationPlayer
 MultiplayerSpawner
 Node2D
 MultiplayerSynchronizer
@@ -9,11 +21,8 @@ CanvasModulate
 CharacterBody2D
 HSeparator
 VSeparator
-Button
 BoxContainer
 MarginContainer
-VBoxContainer
-Control
 Label
 PanelContainer
 Container

@@ -1,11 +1,19 @@
 extends CharacterBody2D
 
-@export var speed = 200
-@export var friction = 1
-@export var acceleration = 0.1
+@export var acceleration = 500
+@export var maxSpeed = 80
+@export var friction = 500
 
+enum {
+	walk
+}
+
+var state = walk
+
+@onready var animationPlayer = $AnimationPlayer
+@onready var sprite = $Sprite2D
 @onready var camera = $Camera2D
-
+#@onready var walkEffect = $Walk
 
 signal healthChanged(health_value)
 var health = 3
@@ -16,33 +24,34 @@ func _enter_tree():
 func _ready():
 	if not is_multiplayer_authority(): return
 	camera.enabled = true
+	velocity = Vector2.ZERO
 
 func get_input():
-	if not is_multiplayer_authority(): return
+	if not is_multiplayer_authority(): return Vector2.ZERO
 	
-	var input = Vector2()
-	if Input.is_action_pressed('ui_right'):
-		input.x += 1
-	if Input.is_action_pressed('ui_left'):
-		input.x -= 1
-	if Input.is_action_pressed('ui_down'):
-		input.y += 1
-	if Input.is_action_pressed('ui_up'):
-		input.y -= 1
-	return input
+	var Input_vector = Vector2.ZERO
+	Input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")
+	Input_vector.y = Input.get_action_strength("down") - Input.get_action_strength("up")
+	Input_vector = Input_vector.normalized()
+	return Input_vector
 
 func _physics_process(delta):
-	var direction = get_input()
-	if direction:
-		velocity = velocity.lerp(direction.normalized() * speed, acceleration)
-	else:
-		velocity = velocity.lerp(Vector2.ZERO, friction)
-	move_and_slide()
+	match state:
+		walk:
+			walkState(delta)
+
+func walkState(delta):
+	var Input_vector = get_input()
 	
-@rpc("any_peer")
-func receive_damage():
-	health -= 1
-	if health <= 0:
-		health = 3
-		position = Vector2.ZERO
-	healthChanged.emit(health)
+	if Input_vector != Vector2.ZERO:
+		velocity = velocity.move_toward(Input_vector * maxSpeed, acceleration * delta)
+		animationPlayer.play("Walk")
+		if Input.is_action_pressed("left"): sprite.flip_h = true
+		elif Input.is_action_pressed("right"): sprite.flip_h = false
+		#if !walkEffect.playing: walkEffect.play()
+	else:
+		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+		animationPlayer.play("Idle")
+		#walkEffect.stop()
+		
+	move_and_slide()

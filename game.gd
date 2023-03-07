@@ -1,15 +1,15 @@
 extends Node
 
-@onready var mainMenu = $CanvasLayer/MainMenu
-@onready var address_entry = null
+@onready var mainMenu = $CanvasLayer/TitleMenu
+@onready var addressEntry = $CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons/AddressEntry
 @onready var hud = null
 @onready var health_bar = null
 
-const Player = preload("res://player.tscn")
+const Player = preload("res://player.tscn") #preload("res://Player/player.tscn")
 const PORT = 9999
 var enet_peer = ENetMultiplayerPeer.new()
 
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 
@@ -30,8 +30,8 @@ func _on_join_pressed():
 	mainMenu.hide()
 	#hud.show()
 	
-	#enet_peer.create_client(address_entry.text, PORT)
-	enet_peer.create_client("127.0.0.1", PORT)
+	enet_peer.create_client(addressEntry.text, PORT)
+	#enet_peer.create_client("127.0.0.1", PORT)
 	multiplayer.multiplayer_peer = enet_peer
 	
 func _on_quit_pressed():

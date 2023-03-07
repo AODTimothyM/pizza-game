@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://sawq0q6qmeeh"]
+[gd_scene load_steps=4 format=3 uid="uid://dms4alcyc40r2"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_uh6l4"]
-[ext_resource type="PackedScene" uid="uid://bwjucwus6535v" path="res://world.tscn" id="2_km0gu"]
+[ext_resource type="PackedScene" uid="uid://c61lw41jbaum4" path="res://World/world.tscn" id="2_km0gu"]
+[ext_resource type="Script" path="res://TitleMenu.gd" id="3_dajex"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_uh6l4")
@@ -14,15 +15,16 @@ spawn_path = NodePath("../World")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MainMenu" type="Control" parent="CanvasLayer"]
+[node name="TitleMenu" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_dajex")
 
-[node name="Background" type="ColorRect" parent="CanvasLayer/MainMenu"]
+[node name="Background" type="ColorRect" parent="CanvasLayer/TitleMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,45 +34,99 @@ grow_vertical = 2
 color = Color(1, 0.317647, 0.913725, 1)
 metadata/_edit_lock_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TitleMenu"]
 layout_mode = 2
 offset_left = 184.0
 offset_top = 128.0
 offset_right = 448.0
 offset_bottom = 320.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TitleMenu/MarginContainer"]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Pizza Game"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_constants/separation = 50
+theme_override_constants/separation = 100
 
-[node name="Host" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+[node name="MainButtons" type="VBoxContainer" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Host"
 
-[node name="Join" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+[node name="Play" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons"]
 layout_mode = 2
-text = "Join"
+text = "Play"
 
-[node name="Options" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
-visible = false
+[node name="Options" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons"]
 layout_mode = 2
 text = "Options
 "
 
-[node name="Quit" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons"]
 layout_mode = 2
 text = "Quit"
 
-[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Host" to="." method="_on_host_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Join" to="." method="_on_join_pressed"]
-[connection signal="pressed" from="CanvasLayer/MainMenu/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="PlayButtons" type="VBoxContainer" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Host" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons"]
+layout_mode = 2
+text = "Host"
+
+[node name="Join" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons"]
+layout_mode = 2
+text = "Join"
+
+[node name="AddressEntry" type="LineEdit" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons"]
+layout_mode = 2
+placeholder_text = "Enter Address To Join"
+alignment = 1
+
+[node name="Back" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons"]
+layout_mode = 2
+text = "Back"
+
+[node name="OptionsMenu" type="VBoxContainer" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Fullscreen" type="CheckBox" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="Volume" type="HBoxContainer" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu"]
+layout_mode = 2
+
+[node name="VolumeCheckbox" type="CheckBox" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Volume"]
+layout_mode = 2
+button_pressed = true
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Volume"]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Back" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons/Play" to="CanvasLayer/TitleMenu" method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons/Options" to="CanvasLayer/TitleMenu" method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons/Join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons/Back" to="CanvasLayer/TitleMenu" method="_on_back_pressed"]
+[connection signal="toggled" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Fullscreen" to="CanvasLayer/TitleMenu" method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Volume/VolumeCheckbox" to="CanvasLayer/TitleMenu" method="_on_volume_checkbox_toggled"]
+[connection signal="value_changed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Volume/VolumeSlider" to="CanvasLayer/TitleMenu" method="_on_volume_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Back" to="CanvasLayer/TitleMenu" method="_on_back_pressed"]
