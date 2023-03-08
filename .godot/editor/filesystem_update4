@@ -5,3 +5,5 @@ res://MainMenu.gd
 res://game.gd
 res://TitleMenu.gd
 res://player.gd
+res://CharacterEditor.gd
+res://characterEditor.gd

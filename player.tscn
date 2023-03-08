@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmhwjtkdwqrok"]
+[gd_scene load_steps=11 format=3 uid="uid://bmhwjtkdwqrok"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_7rakx"]
-[ext_resource type="Texture2D" uid="uid://1rkniprgw6m" path="res://Player/Sam.png" id="2_5ky2n"]
+[ext_resource type="Texture2D" uid="uid://djr86ospfdhvl" path="res://Player/Body.png" id="2_l7s7w"]
+[ext_resource type="Texture2D" uid="uid://bl33lhs7hhtrs" path="res://Player/Shirt.png" id="3_ssudh"]
+[ext_resource type="Texture2D" uid="uid://3onyywjpq8au" path="res://Player/Pants.png" id="4_xwct4"]
+[ext_resource type="Texture2D" uid="uid://1fppvee1py07" path="res://Player/Hair.png" id="5_rw48y"]
 
 [sub_resource type="Animation" id="Animation_ac5p2"]
 resource_name = "Idle"
@@ -9,7 +12,7 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprites/Body:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -26,7 +29,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("Sprites/Body:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -49,7 +52,7 @@ properties/0/sync = true
 properties/1/path = NodePath("Sprite2D:frame")
 properties/1/spawn = true
 properties/1/sync = true
-properties/2/path = NodePath("Sprite2D:flip_h")
+properties/2/path = NodePath(".:scale")
 properties/2/spawn = true
 properties/2/sync = true
 
@@ -60,14 +63,32 @@ size = Vector2(9, 4)
 collision_layer = 2
 script = ExtResource("1_7rakx")
 
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Body" type="Sprite2D" parent="Sprites"]
+position = Vector2(0, -16)
+texture = ExtResource("2_l7s7w")
+hframes = 3
+vframes = 8
+
+[node name="Shirt" type="Sprite2D" parent="Sprites"]
+modulate = Color(1, 0.301961, 0.329412, 1)
+position = Vector2(0, -8)
+texture = ExtResource("3_ssudh")
+
+[node name="Pants" type="Sprite2D" parent="Sprites"]
+modulate = Color(0.282353, 0.290196, 0.466667, 1)
+position = Vector2(0, -16)
+texture = ExtResource("4_xwct4")
+hframes = 3
+
+[node name="Hair" type="Sprite2D" parent="Sprites"]
+position = Vector2(0, -16)
+texture = ExtResource("5_rw48y")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
 zoom = Vector2(2, 2)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -16)
-texture = ExtResource("2_5ky2n")
-hframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

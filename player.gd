@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+@export var skinColor = Color.WHITE
+@export var shirtColor = Color.WHITE
+@export var pantsColor = Color.WHITE
+
 @export var acceleration = 500
 @export var maxSpeed = 80
 @export var friction = 500
@@ -11,7 +15,7 @@ enum {
 var state = walk
 
 @onready var animationPlayer = $AnimationPlayer
-@onready var sprite = $Sprite2D
+#@onready var sprite = $Sprite2D
 @onready var camera = $Camera2D
 #@onready var walkEffect = $Walk
 
@@ -27,7 +31,7 @@ func _ready():
 	velocity = Vector2.ZERO
 
 func get_input():
-	if not is_multiplayer_authority(): return Vector2.ZERO
+	#if not is_multiplayer_authority(): return Vector2.ZERO
 	
 	var Input_vector = Vector2.ZERO
 	Input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")
@@ -46,8 +50,8 @@ func walkState(delta):
 	if Input_vector != Vector2.ZERO:
 		velocity = velocity.move_toward(Input_vector * maxSpeed, acceleration * delta)
 		animationPlayer.play("Walk")
-		if Input.is_action_pressed("left"): sprite.flip_h = true #true
-		elif Input.is_action_pressed("right"): sprite.flip_h = false #false
+		if Input.is_action_pressed("left"): $Sprites.scale.x = -1
+		elif Input.is_action_pressed("right"): $Sprites.scale.x = 1
 		#if !walkEffect.playing: walkEffect.play()
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)

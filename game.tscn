@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dms4alcyc40r2"]
+[gd_scene load_steps=10 format=3 uid="uid://dkt78ulextkh8"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_uh6l4"]
 [ext_resource type="PackedScene" uid="uid://c61lw41jbaum4" path="res://World/world.tscn" id="2_km0gu"]
 [ext_resource type="Script" path="res://TitleMenu.gd" id="3_dajex"]
+[ext_resource type="Texture2D" uid="uid://djr86ospfdhvl" path="res://Player/Body.png" id="4_ablre"]
+[ext_resource type="Script" path="res://characterEditor.gd" id="4_dsbcx"]
 [ext_resource type="AudioStream" uid="uid://b2nf2abphfm43" path="res://FreddyLaugh.mp3" id="4_qgls4"]
+[ext_resource type="Texture2D" uid="uid://bl33lhs7hhtrs" path="res://Player/Shirt.png" id="5_80447"]
+[ext_resource type="Texture2D" uid="uid://3onyywjpq8au" path="res://Player/Pants.png" id="6_ijcib"]
+[ext_resource type="Texture2D" uid="uid://1fppvee1py07" path="res://Player/Hair.png" id="8_o40i7"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_uh6l4")
@@ -26,6 +31,7 @@ grow_vertical = 2
 script = ExtResource("3_dajex")
 
 [node name="Background" type="ColorRect" parent="CanvasLayer/TitleMenu"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -122,6 +128,178 @@ value = 1.0
 layout_mode = 2
 text = "Back"
 
+[node name="CharacterEditor" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_dsbcx")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_lock_ = true
+
+[node name="Sprites" type="Node2D" parent="CanvasLayer/CharacterEditor"]
+position = Vector2(96, 296)
+scale = Vector2(5, 5)
+
+[node name="Body" type="Sprite2D" parent="CanvasLayer/CharacterEditor/Sprites"]
+position = Vector2(0, -16)
+texture = ExtResource("4_ablre")
+hframes = 3
+vframes = 8
+
+[node name="Shirt" type="Sprite2D" parent="CanvasLayer/CharacterEditor/Sprites"]
+position = Vector2(0, -8)
+texture = ExtResource("5_80447")
+
+[node name="Pants" type="Sprite2D" parent="CanvasLayer/CharacterEditor/Sprites"]
+position = Vector2(0, -16)
+texture = ExtResource("6_ijcib")
+hframes = 3
+
+[node name="Hair" type="Sprite2D" parent="CanvasLayer/CharacterEditor/Sprites"]
+position = Vector2(0, -16)
+texture = ExtResource("8_o40i7")
+hframes = 4
+
+[node name="SkinNext" type="Button" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 320.0
+offset_right = 160.0
+offset_bottom = 351.0
+text = "Next"
+
+[node name="SkinBack" type="Button" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 320.0
+offset_right = 88.0
+offset_bottom = 351.0
+text = "Back"
+
+[node name="HairNext" type="Button" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 128.0
+offset_right = 160.0
+offset_bottom = 159.0
+text = "Next"
+
+[node name="HairBack" type="Button" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 128.0
+offset_right = 88.0
+offset_bottom = 159.0
+text = "Back"
+
+[node name="ColorLabels" type="Control" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_right = -320.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/CharacterEditor/ColorLabels"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 64.0
+offset_right = 102.0
+offset_bottom = 90.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Hair Color"
+
+[node name="Label2" type="Label" parent="CanvasLayer/CharacterEditor/ColorLabels"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 208.0
+offset_right = 106.0
+offset_bottom = 234.0
+size_flags_horizontal = 4
+text = "Shirt Color"
+
+[node name="Label3" type="Label" parent="CanvasLayer/CharacterEditor/ColorLabels"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -44.5
+offset_top = -120.0
+offset_right = 44.5
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "Pants Color"
+
+[node name="ColorPickers" type="VBoxContainer" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -220.0
+offset_bottom = 220.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="HairColor" type="ColorPicker" parent="CanvasLayer/CharacterEditor/ColorPickers"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+edit_alpha = false
+color_mode = 1
+picker_shape = 4
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+presets_visible = false
+
+[node name="ShirtColor" type="ColorPicker" parent="CanvasLayer/CharacterEditor/ColorPickers"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+edit_alpha = false
+color_mode = 1
+picker_shape = 4
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+presets_visible = false
+
+[node name="PantsColor" type="ColorPicker" parent="CanvasLayer/CharacterEditor/ColorPickers"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+edit_alpha = false
+color_mode = 1
+picker_shape = 4
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+presets_visible = false
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_qgls4")
 
@@ -135,3 +313,10 @@ stream = ExtResource("4_qgls4")
 [connection signal="toggled" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Volume/VolumeCheckbox" to="CanvasLayer/TitleMenu" method="_on_volume_checkbox_toggled"]
 [connection signal="value_changed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Volume/VolumeSlider" to="CanvasLayer/TitleMenu" method="_on_volume_slider_value_changed"]
 [connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/OptionsMenu/Back" to="CanvasLayer/TitleMenu" method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharacterEditor/SkinNext" to="CanvasLayer/CharacterEditor" method="_on_skin_next_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharacterEditor/SkinBack" to="CanvasLayer/CharacterEditor" method="_on_skin_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharacterEditor/HairNext" to="CanvasLayer/CharacterEditor" method="_on_hair_next_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharacterEditor/HairBack" to="CanvasLayer/CharacterEditor" method="_on_hair_back_pressed"]
+[connection signal="color_changed" from="CanvasLayer/CharacterEditor/ColorPickers/HairColor" to="CanvasLayer/CharacterEditor" method="_on_hair_color_color_changed"]
+[connection signal="color_changed" from="CanvasLayer/CharacterEditor/ColorPickers/ShirtColor" to="CanvasLayer/CharacterEditor" method="_on_shirt_color_color_changed"]
+[connection signal="color_changed" from="CanvasLayer/CharacterEditor/ColorPickers/PantsColor" to="CanvasLayer/CharacterEditor" method="_on_pants_color_color_changed"]
