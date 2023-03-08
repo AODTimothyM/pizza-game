@@ -31,7 +31,7 @@ func _ready():
 	velocity = Vector2.ZERO
 
 func get_input():
-	#if not is_multiplayer_authority(): return Vector2.ZERO
+	if not is_multiplayer_authority(): return Vector2.ZERO
 	
 	var Input_vector = Vector2.ZERO
 	Input_vector.x = Input.get_action_strength("right") - Input.get_action_strength("left")

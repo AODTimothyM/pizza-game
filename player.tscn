@@ -49,12 +49,21 @@ _data = {
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/sync = true
-properties/1/path = NodePath("Sprite2D:frame")
+properties/1/path = NodePath("Sprites/Body:frame")
 properties/1/spawn = true
 properties/1/sync = true
-properties/2/path = NodePath(".:scale")
+properties/2/path = NodePath("Sprites/Pants:frame")
 properties/2/spawn = true
 properties/2/sync = true
+properties/3/path = NodePath("Sprites:scale")
+properties/3/spawn = true
+properties/3/sync = true
+properties/4/path = NodePath("Sprites/Shirt:frame")
+properties/4/spawn = true
+properties/4/sync = true
+properties/5/path = NodePath("Sprites/Hair:frame")
+properties/5/spawn = true
+properties/5/sync = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tafch"]
 size = Vector2(9, 4)
@@ -85,6 +94,7 @@ hframes = 3
 [node name="Hair" type="Sprite2D" parent="Sprites"]
 position = Vector2(0, -16)
 texture = ExtResource("5_rw48y")
+hframes = 4
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
