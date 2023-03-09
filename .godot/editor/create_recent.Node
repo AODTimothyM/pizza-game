@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 Node2D
 Area2D
 CollisionShape2D
 Sprite2D
 Marker2D
+=======
+TileMap
+>>>>>>> e5ac7ee5256297927145219dbb0b39cc28433008
 RigidBody2D
 StaticBody2D
 Control
@@ -20,7 +24,6 @@ VSlider
 CheckBox
 HBoxContainer
 LineEdit
-TileMap
 AnimationPlayer
 MultiplayerSpawner
 MultiplayerSynchronizer
@@ -30,3 +33,7 @@ CharacterBody2D
 HSeparator
 VSeparator
 BoxContainer
+<<<<<<< HEAD
+=======
+MarginContainer
+>>>>>>> e5ac7ee5256297927145219dbb0b39cc28433008
