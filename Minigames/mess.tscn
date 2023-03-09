@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddhsbe752lhhx"]
+
+[ext_resource type="Script" path="res://Minigames/mess.gd" id="1_ap6lj"]
+[ext_resource type="Texture2D" uid="uid://dkfar7kgcv2vd" path="res://icon.svg" id="1_eleop"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gtvb2"]
+radius = 80.0
+
+[node name="Mess" type="Sprite2D"]
+texture = ExtResource("1_eleop")
+script = ExtResource("1_ap6lj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_gtvb2")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

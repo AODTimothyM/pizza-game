@@ -10,3 +10,7 @@ res://characterEditor.gd
 res://minigame_trigger.tscn
 res://minigame_trigger.gd
 res://node_2d.tscn
+res://Minigames/cleaning_tables_minigame.tscn
+res://Minigames/mess.tscn
+res://Minigames/mess.gd
+res://Minigames/cleaning_tables_minigame.gd

@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://cavgufc382j5b"]
+
+[ext_resource type="Script" path="res://Minigames/cleaning_tables_minigame.gd" id="1_s38oh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_isgdf"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[node name="CleaningTablesMinigame" type="Node2D"]
+script = ExtResource("1_s38oh")
+
+[node name="Table" type="Sprite2D" parent="."]
+modulate = Color(0.368627, 0.176471, 0.0627451, 1)
+position = Vector2(320, 316)
+scale = Vector2(5, 2.5625)
+texture = SubResource("CompressedTexture2D_isgdf")
+
+[node name="Markers" type="Node2D" parent="Table"]
+
+[node name="Marker2D" type="Marker2D" parent="Table/Markers"]
+position = Vector2(-43.2, 32.7805)
+scale = Vector2(1, 1)
+
+[node name="Marker2D2" type="Marker2D" parent="Table/Markers"]
+position = Vector2(-22.4, 4.68292)
+scale = Vector2(1, 1)
+
+[node name="Marker2D3" type="Marker2D" parent="Table/Markers"]
+position = Vector2(-46.4, -26.5366)
+scale = Vector2(1, 1)
+
+[node name="Marker2D4" type="Marker2D" parent="Table/Markers"]
+position = Vector2(-6.4, -35.9024)
+scale = Vector2(1, 1)
+
+[node name="Marker2D5" type="Marker2D" parent="Table/Markers"]
+position = Vector2(12.8, 20.2927)
+scale = Vector2(1, 1)
+
+[node name="Marker2D6" type="Marker2D" parent="Table/Markers"]
+position = Vector2(-19.2, 39.0244)
+scale = Vector2(1, 1)
+
+[node name="Marker2D7" type="Marker2D" parent="Table/Markers"]
+position = Vector2(22.4, -26.5366)
+scale = Vector2(1, 1)
+
+[node name="Marker2D8" type="Marker2D" parent="Table/Markers"]
+position = Vector2(40, 32.7805)
+scale = Vector2(1, 1)
+
+[node name="Marker2D9" type="Marker2D" parent="Table/Markers"]
+position = Vector2(49.6, -4.68293)
+scale = Vector2(1, 1)
+
+[node name="Marker2D10" type="Marker2D" parent="Table/Markers"]
+position = Vector2(46.4, -48.3902)
+scale = Vector2(1, 1)
