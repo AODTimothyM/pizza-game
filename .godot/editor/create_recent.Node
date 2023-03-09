@@ -1,3 +1,4 @@
+TileMap
 RigidBody2D
 StaticBody2D
 CollisionShape2D
@@ -19,7 +20,6 @@ VSlider
 CheckBox
 HBoxContainer
 LineEdit
-TileMap
 AnimationPlayer
 MultiplayerSpawner
 MultiplayerSynchronizer
@@ -30,4 +30,3 @@ HSeparator
 VSeparator
 BoxContainer
 MarginContainer
-PanelContainer

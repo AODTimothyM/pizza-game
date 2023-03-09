@@ -1,12 +1,1 @@
-res://game.tscn
-res://player.tscn
-res://World/world.tscn
-res://MainMenu.gd
-res://game.gd
-res://TitleMenu.gd
-res://player.gd
-res://CharacterEditor.gd
-res://characterEditor.gd
-res://minigame_trigger.tscn
-res://minigame_trigger.gd
-res://node_2d.tscn
+res://Minigames/pizza_builder_minigame.tscn
