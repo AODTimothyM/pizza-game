@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://1fppvee1py07" path="res://Player/Hair.png" id="8_o40i7"]
 
 [node name="Game" type="Node"]
+editor_description = "172.17.26.62"
 script = ExtResource("1_uh6l4")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
@@ -336,6 +337,22 @@ can_add_swatches = false
 sampler_visible = false
 color_modes_visible = false
 presets_visible = false
+
+[node name="Hud" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Minigames" type="Node2D" parent="CanvasLayer"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Minigames"]
+offset_left = 120.0
+offset_top = 112.0
+offset_right = 448.0
+offset_bottom = 336.0
+color = Color(0.176471, 0, 1, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_qgls4")

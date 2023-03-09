@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c61lw41jbaum4"]
+[gd_scene load_steps=6 format=3 uid="uid://c61lw41jbaum4"]
 
 [ext_resource type="Script" path="res://World/world.gd" id="1_24kh5"]
 [ext_resource type="Texture2D" uid="uid://dbcrjgwpa5t61" path="res://World/Walls.png" id="2_sfyvp"]
+[ext_resource type="PackedScene" uid="uid://biwsf4ptvsyy6" path="res://minigame_trigger.tscn" id="3_iruy0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_the32"]
 texture = ExtResource("2_sfyvp")
@@ -309,3 +310,6 @@ y_sort_enabled = true
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("res://player.tscn")
 spawn_path = NodePath("../YSort")
+
+[node name="MinigameTrigger" parent="." instance=ExtResource("3_iruy0")]
+position = Vector2(64, -168)

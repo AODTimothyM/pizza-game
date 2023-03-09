@@ -1,9 +1,5 @@
 extends CharacterBody2D
 
-@export var skinColor = Color.WHITE
-@export var shirtColor = Color.WHITE
-@export var pantsColor = Color.WHITE
-
 @export var acceleration = 500
 @export var maxSpeed = 80
 @export var friction = 500
@@ -22,8 +18,7 @@ var state = walk
 @onready var hair = $Sprites/Hair
 #@onready var walkEffect = $Walk
 
-signal healthChanged(health_value)
-var health = 3
+signal touchedMinigame(minigame)
 
 var savePath = "user://pizza.manic"
 
@@ -81,3 +76,8 @@ func walkState(delta):
 		#walkEffect.stop()
 		
 	move_and_slide()
+	
+func enteredTrigger():
+	print("EnTeReD tRiGgEr")
+	emit_signal("touchedMinigame", "test")
+	

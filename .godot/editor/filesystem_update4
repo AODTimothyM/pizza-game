@@ -7,3 +7,6 @@ res://TitleMenu.gd
 res://player.gd
 res://CharacterEditor.gd
 res://characterEditor.gd
+res://minigame_trigger.tscn
+res://minigame_trigger.gd
+res://node_2d.tscn

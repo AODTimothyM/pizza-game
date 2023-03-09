@@ -3,6 +3,7 @@ extends Node
 @onready var mainMenu = $CanvasLayer/TitleMenu
 @onready var addressEntry = $CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons/AddressEntry
 @onready var hud = null
+@onready var minigames = $CanvasLayer/Minigames
 @onready var health_bar = null
 
 const Player = preload("res://player.tscn") #preload("res://Player/player.tscn")
@@ -15,7 +16,7 @@ func _unhandled_input(_event):
 
 func _on_host_pressed():
 	mainMenu.hide()
-	#hud.show()
+	#minigames.show()
 	
 	enet_peer.create_server(PORT)
 	multiplayer.multiplayer_peer = enet_peer
@@ -28,7 +29,7 @@ func _on_host_pressed():
 
 func _on_join_pressed():
 	mainMenu.hide()
-	#hud.show()
+	#minigames.show()
 	
 	enet_peer.create_client(addressEntry.text, PORT)
 	#enet_peer.create_client("127.0.0.1", PORT)
@@ -43,17 +44,24 @@ func add_player(peer_id):
 	$World.addPlayer(player)
 	
 	# Connect player signals to methods here
-	#if player.is_multiplayer_authority():
+	if player.is_multiplayer_authority():
+		player.touchedMinigame.connect(activateMinigame)
 
 func remove_player(peer_id):
 	var player = get_node_or_null(str(peer_id))
+	print(player)
 	if player:
+		print("PLAYER")
 		player.queue_free()
 
 func _on_multiplayer_spawner_spawned(node):
 	print(node.name)
 #	if node.is_multiplayer_authority():
 #		node.healthChanged.connect(update_health_bar)
+
+func activateMinigame(minigame) -> void:
+	print("TEST>TEST")
+	minigames.show()
 
 func upnp_setup():
 	var upnp = UPNP.new()
