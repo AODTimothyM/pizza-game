@@ -15,12 +15,17 @@ enum {
 var state = walk
 
 @onready var animationPlayer = $AnimationPlayer
-#@onready var sprite = $Sprite2D
 @onready var camera = $Camera2D
+@onready var body = $Sprites/Body
+@onready var shirt = $Sprites/Shirt
+@onready var pants = $Sprites/Pants
+@onready var hair = $Sprites/Hair
 #@onready var walkEffect = $Walk
 
 signal healthChanged(health_value)
 var health = 3
+
+var savePath = "user://pizza.manic"
 
 func _enter_tree():
 	set_multiplayer_authority(str(name).to_int())
@@ -29,6 +34,23 @@ func _ready():
 	if not is_multiplayer_authority(): return
 	camera.enabled = true
 	velocity = Vector2.ZERO
+	
+	if FileAccess.file_exists(savePath):
+		print("file found")
+		var file = FileAccess.open(savePath, FileAccess.READ)
+		var save = file.get_var()
+		
+		# Body
+		body.frame_coords.y = save.body
+		# Hair
+		hair.frame = save.hairType
+		hair.modulate = save.hairColor
+		# Shirt
+		shirt.modulate = save.shirt
+		# Pants
+		pants.modulate = save.pants
+	else:
+		print("file not found")
 
 func get_input():
 	if not is_multiplayer_authority(): return Vector2.ZERO

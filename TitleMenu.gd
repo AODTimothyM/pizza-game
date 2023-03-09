@@ -5,6 +5,8 @@ extends Control
 @onready var optionMenu = $MarginContainer/VBoxContainer/OptionsMenu
 @onready var volumeSlider = $MarginContainer/VBoxContainer/OptionsMenu/Volume/VolumeSlider
 
+@onready var characterEditor = get_parent().get_node("CharacterEditor")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	mainButtons.get_node("Play").grab_focus()
@@ -42,3 +44,6 @@ func _on_volume_checkbox_toggled(button_pressed):
 func _on_volume_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(0, linear_to_db(value))
 
+func _on_edit_character_pressed():
+	visible = false
+	characterEditor.visible = true

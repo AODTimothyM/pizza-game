@@ -22,6 +22,7 @@ spawn_path = NodePath("../World")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TitleMenu" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,14 +32,13 @@ grow_vertical = 2
 script = ExtResource("3_dajex")
 
 [node name="Background" type="ColorRect" parent="CanvasLayer/TitleMenu"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0.317647, 0.913725, 1)
+color = Color(0.2, 0.2, 0.2, 1)
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TitleMenu"]
@@ -68,6 +68,10 @@ layout_mode = 2
 [node name="Play" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons"]
 layout_mode = 2
 text = "Play"
+
+[node name="EditCharacter" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons"]
+layout_mode = 2
+text = "Edit Character"
 
 [node name="Options" type="Button" parent="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons"]
 layout_mode = 2
@@ -129,7 +133,6 @@ layout_mode = 2
 text = "Back"
 
 [node name="CharacterEditor" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -170,23 +173,41 @@ hframes = 3
 [node name="Hair" type="Sprite2D" parent="CanvasLayer/CharacterEditor/Sprites"]
 position = Vector2(0, -16)
 texture = ExtResource("8_o40i7")
-hframes = 4
+hframes = 11
+
+[node name="SkinLabel" type="Label" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 128.0
+offset_bottom = 346.0
+text = "Skin"
+horizontal_alignment = 1
 
 [node name="SkinNext" type="Button" parent="CanvasLayer/CharacterEditor"]
 layout_mode = 0
 offset_left = 104.0
-offset_top = 320.0
+offset_top = 344.0
 offset_right = 160.0
-offset_bottom = 351.0
+offset_bottom = 375.0
 text = "Next"
 
 [node name="SkinBack" type="Button" parent="CanvasLayer/CharacterEditor"]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 320.0
+offset_top = 344.0
 offset_right = 88.0
-offset_bottom = 351.0
+offset_bottom = 375.0
 text = "Back"
+
+[node name="HairLabel" type="Label" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 104.0
+offset_right = 128.0
+offset_bottom = 130.0
+text = "Hair"
+horizontal_alignment = 1
 
 [node name="HairNext" type="Button" parent="CanvasLayer/CharacterEditor"]
 layout_mode = 0
@@ -203,6 +224,22 @@ offset_top = 128.0
 offset_right = 88.0
 offset_bottom = 159.0
 text = "Back"
+
+[node name="Done" type="Button" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 416.0
+offset_right = 128.0
+offset_bottom = 447.0
+text = "Done"
+
+[node name="Random" type="Button" parent="CanvasLayer/CharacterEditor"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 48.0
+offset_right = 137.0
+offset_bottom = 79.0
+text = "Random"
 
 [node name="ColorLabels" type="Control" parent="CanvasLayer/CharacterEditor"]
 layout_mode = 1
@@ -304,6 +341,7 @@ presets_visible = false
 stream = ExtResource("4_qgls4")
 
 [connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons/Play" to="CanvasLayer/TitleMenu" method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons/EditCharacter" to="CanvasLayer/TitleMenu" method="_on_edit_character_pressed"]
 [connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons/Options" to="CanvasLayer/TitleMenu" method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/MainButtons/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="CanvasLayer/TitleMenu/MarginContainer/VBoxContainer/PlayButtons/Host" to="." method="_on_host_pressed"]
@@ -317,6 +355,8 @@ stream = ExtResource("4_qgls4")
 [connection signal="pressed" from="CanvasLayer/CharacterEditor/SkinBack" to="CanvasLayer/CharacterEditor" method="_on_skin_back_pressed"]
 [connection signal="pressed" from="CanvasLayer/CharacterEditor/HairNext" to="CanvasLayer/CharacterEditor" method="_on_hair_next_pressed"]
 [connection signal="pressed" from="CanvasLayer/CharacterEditor/HairBack" to="CanvasLayer/CharacterEditor" method="_on_hair_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharacterEditor/Done" to="CanvasLayer/CharacterEditor" method="_on_done_pressed"]
+[connection signal="pressed" from="CanvasLayer/CharacterEditor/Random" to="CanvasLayer/CharacterEditor" method="_on_random_pressed"]
 [connection signal="color_changed" from="CanvasLayer/CharacterEditor/ColorPickers/HairColor" to="CanvasLayer/CharacterEditor" method="_on_hair_color_color_changed"]
 [connection signal="color_changed" from="CanvasLayer/CharacterEditor/ColorPickers/ShirtColor" to="CanvasLayer/CharacterEditor" method="_on_shirt_color_color_changed"]
 [connection signal="color_changed" from="CanvasLayer/CharacterEditor/ColorPickers/PantsColor" to="CanvasLayer/CharacterEditor" method="_on_pants_color_color_changed"]

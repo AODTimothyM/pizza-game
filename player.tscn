@@ -12,10 +12,22 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprites/Body:frame")
+tracks/0/path = NodePath("Sprites/Pants:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites/Body:frame_coords:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -29,10 +41,22 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprites/Body:frame")
+tracks/0/path = NodePath("Sprites/Pants:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 2, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites/Body:frame_coords:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
@@ -64,6 +88,15 @@ properties/4/sync = true
 properties/5/path = NodePath("Sprites/Hair:frame")
 properties/5/spawn = true
 properties/5/sync = true
+properties/6/path = NodePath("Sprites/Shirt:modulate")
+properties/6/spawn = true
+properties/6/sync = true
+properties/7/path = NodePath("Sprites/Pants:modulate")
+properties/7/spawn = true
+properties/7/sync = true
+properties/8/path = NodePath("Sprites/Hair:modulate")
+properties/8/spawn = true
+properties/8/sync = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tafch"]
 size = Vector2(9, 4)
@@ -94,7 +127,8 @@ hframes = 3
 [node name="Hair" type="Sprite2D" parent="Sprites"]
 position = Vector2(0, -16)
 texture = ExtResource("5_rw48y")
-hframes = 4
+hframes = 11
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 enabled = false
