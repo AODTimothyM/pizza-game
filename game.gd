@@ -6,9 +6,20 @@ extends Node
 @onready var minigames = $CanvasLayer/Minigames
 @onready var health_bar = null
 
+var savePath = "user://pizza.manic"
 const Player = preload("res://player.tscn") #preload("res://Player/player.tscn")
 const PORT = 9999
 var enet_peer = ENetMultiplayerPeer.new()
+
+func _ready():
+	$World.nodeSpawned.connect(_on_multiplayer_spawner_spawned)
+	
+	if FileAccess.file_exists(savePath):
+		$CanvasLayer/TitleMenu.visible = true
+		$CanvasLayer/CharacterEditor.visible = false
+	else:
+		$CanvasLayer/TitleMenu.visible = false
+		$CanvasLayer/CharacterEditor.visible = true
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("quit"):
@@ -32,7 +43,6 @@ func _on_join_pressed():
 	#minigames.show()
 	
 	enet_peer.create_client(addressEntry.text, PORT)
-	#enet_peer.create_client("127.0.0.1", PORT)
 	multiplayer.multiplayer_peer = enet_peer
 	
 func _on_quit_pressed():
@@ -41,23 +51,21 @@ func _on_quit_pressed():
 func add_player(peer_id):
 	var player = Player.instantiate()
 	player.name = str(peer_id)
+	#add_child(player)
 	$World.addPlayer(player)
 	
 	# Connect player signals to methods here
 	if player.is_multiplayer_authority():
+		print("Host signal connected")
 		player.touchedMinigame.connect(activateMinigame)
 
 func remove_player(peer_id):
-	var player = get_node_or_null(str(peer_id))
-	print(player)
-	if player:
-		print("PLAYER")
-		player.queue_free()
+	$World.removePlayer(peer_id)
 
 func _on_multiplayer_spawner_spawned(node):
-	print(node.name)
-#	if node.is_multiplayer_authority():
-#		node.healthChanged.connect(update_health_bar)
+	if node.is_multiplayer_authority():
+		print("Client signal connected")
+		node.touchedMinigame.connect(activateMinigame)
 
 func activateMinigame(minigame) -> void:
 	print("TEST>TEST")

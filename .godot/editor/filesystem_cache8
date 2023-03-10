@@ -1,4 +1,5 @@
 2a60927148abd1d33b818b535e306557
+<<<<<<< HEAD
 ::res://::1678453037
 characterEditor.gd::GDScript::-1::1678377814::0::1::::<>Control<>::
 FreddyLaugh.mp3::AudioStreamMP3::4308708176357918558::1678377814::1678377814::1::::<><>::
@@ -60,3 +61,67 @@ WilhelmActor.png::CompressedTexture2D::4202899879060138839::1678377814::16783778
 Walls.png::CompressedTexture2D::7234628261056160596::1678377814::1678377814::1::::<><>::
 world.gd::GDScript::-1::1678377814::0::1::::<>Node2D<>::
 world.tscn::PackedScene::7003078079909446709::1678377814::0::1::::<><>::res://World/world.gd<>uid://dbcrjgwpa5t61<>uid://biwsf4ptvsyy6
+=======
+::res://::1678417684
+characterEditor.gd::GDScript::-1::1678341565::0::1::::<>Control<>::
+FreddyLaugh.mp3::AudioStreamMP3::4308708176357918558::1678214180::1678214222::1::::<><>::
+game.gd::GDScript::-1::1678417496::0::1::::<>Node<>::
+game.tscn::PackedScene::7902376607427238655::1678417496::0::1::::<><>::res://game.gd<>uid://c61lw41jbaum4<>res://TitleMenu.gd<>uid://djr86ospfdhvl<>res://characterEditor.gd<>uid://b2nf2abphfm43<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
+GirlLaugh.mp3::AudioStreamMP3::4118838165761431016::1678214253::1678214260::1::::<><>::
+icon.svg::CompressedTexture2D::7871504431197700417::1678127602::1678127620::1::::<><>::
+minigame_trigger.gd::GDScript::-1::1678386613::0::1::::<>Area2D<>::
+minigame_trigger.tscn::PackedScene::2994451125467288623::1678417467::0::1::::<><>::res://minigame_trigger.gd
+player.gd::GDScript::-1::1678386725::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::3244490311171965930::1678417467::0::1::::<><>::res://player.gd<>uid://djr86ospfdhvl<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
+README.md::TextFile::-1::1678134381::0::1::::<><>::
+TitleMenu.gd::GDScript::-1::1678339792::0::1::::<>Control<>::
+::res://Minigame Assets/::1678400179
+::res://Minigame Assets/Pizza Builder/::1678400179
+::res://Minigames/::1678417468
+cleaning_tables_minigame.gd::GDScript::-1::1678417173::0::1::::<>Node2D<>::
+cleaning_tables_minigame.tscn::PackedScene::4816593585079877257::1678417467::0::1::::<><>::res://Minigames/cleaning_tables_minigame.gd<>uid://c2tl05pw04wyw
+mess.gd::GDScript::-1::1678417436::0::1::::<>Sprite2D<>::
+mess.tscn::PackedScene::7385374178862246377::1678417468::0::1::::<><>::res://Minigames/mess.gd<>uid://dkfar7kgcv2vd
+pizza_builder_minigame.tscn::PackedScene::2614872543332750307::1678400179::0::1::::<><>::uid://dbcrjgwpa5t61
+TableMinigame.png::CompressedTexture2D::6707877454614990102::1678417218::1678416671::1::::<><>::
+::res://Player/::1678319090
+Body.png::CompressedTexture2D::7828115849834677177::1678247232::1678247237::1::::<><>::
+Hair.png::CompressedTexture2D::1836170474545886570::1678319089::1678319090::1::::<><>::
+Pants.png::CompressedTexture2D::1995022385357156648::1678244339::1678244339::1::::<><>::
+Sam.png::CompressedTexture2D::54724564288131618::1678155869::1678155869::1::::<><>::
+Shirt.png::CompressedTexture2D::3218020657289061960::1678243981::1678243981::1::::<><>::
+::res://Sample Sprites/::1678134992
+Bridge.png::CompressedTexture2D::6274253603461029618::1678134991::1678134992::1::::<><>::
+Canopy.png::CompressedTexture2D::273539837992226279::1678134991::1678134992::1::::<><>::
+Cliffs.png::CompressedTexture2D::3737049410075789229::1678134991::1678134992::1::::<><>::
+Flowers (Old).png::CompressedTexture2D::5386519921098939576::1678134991::1678134992::1::::<><>::
+Flowers.png::CompressedTexture2D::2557325953748933701::1678134991::1678134992::1::::<><>::
+Forest Tileset.png::CompressedTexture2D::2260475239712016158::1678134991::1678134992::1::::<><>::
+Forgotten Canopy.png::CompressedTexture2D::6624879557797000267::1678134991::1678134992::1::::<><>::
+Forgotten Leaves.png::CompressedTexture2D::8720802574412710019::1678134991::1678134992::1::::<><>::
+Forgotten Trunk.png::CompressedTexture2D::583890084833404056::1678134991::1678134992::1::::<><>::
+Forgotten.png::CompressedTexture2D::6022654690921318271::1678134991::1678134992::1::::<><>::
+Grass Background.png::CompressedTexture2D::3500719726118715573::1678134991::1678134992::1::::<><>::
+Hopscotch.png::CompressedTexture2D::6547794525684136671::1678134991::1678134992::1::::<><>::
+Leaves.png::CompressedTexture2D::4019736926534728740::1678134991::1678134992::1::::<><>::
+MyRoom.png::CompressedTexture2D::7111266950772981172::1678134991::1678134992::1::::<><>::
+Path.png::CompressedTexture2D::6297592111601384948::1678134991::1678134992::1::::<><>::
+PineTree.png::CompressedTexture2D::3883083178556292748::1678134991::1678134992::1::::<><>::
+Realm.png::CompressedTexture2D::502384157995066286::1678134991::1678134992::1::::<><>::
+RealmPathway.png::CompressedTexture2D::8574582255211108354::1678134991::1678134992::1::::<><>::
+Space.png::CompressedTexture2D::8789331806785426677::1678134991::1678134992::1::::<><>::
+Stairs.png::CompressedTexture2D::5918035803853185910::1678134991::1678134992::1::::<><>::
+Street.png::CompressedTexture2D::6819691295657482194::1678134991::1678134992::1::::<><>::
+Tree.png::CompressedTexture2D::1090059025295933405::1678134991::1678134992::1::::<><>::
+Trees.png::CompressedTexture2D::2779151638560531677::1678134991::1678134992::1::::<><>::
+Trunk.png::CompressedTexture2D::9138468783471547807::1678134991::1678134992::1::::<><>::
+Water1.png::CompressedTexture2D::7319116971591629445::1678134991::1678134992::1::::<><>::
+Water2.png::CompressedTexture2D::3637766613631260983::1678134991::1678134992::1::::<><>::
+Water3.png::CompressedTexture2D::7842730312216679744::1678134991::1678134992::1::::<><>::
+Water.png::CompressedTexture2D::2584679686162036033::1678134991::1678134992::1::::<><>::
+WilhelmActor.png::CompressedTexture2D::4202899879060138839::1678134991::1678134992::1::::<><>::
+::res://World/::1678417467
+Walls.png::CompressedTexture2D::7234628261056160596::1678241923::1678241924::1::::<><>::
+world.gd::GDScript::-1::1678140324::0::1::::<>Node2D<>::
+world.tscn::PackedScene::7003078079909446709::1678417467::0::1::::<><>::res://World/world.gd<>uid://dbcrjgwpa5t61<>uid://biwsf4ptvsyy6
+>>>>>>> 69c6a0403b0737afa482acc235b9f671e0605307
