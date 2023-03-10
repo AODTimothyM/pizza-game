@@ -77,7 +77,6 @@ func walkState(delta):
 		
 	move_and_slide()
 	
-func enteredTrigger():
-	print("EnTeReD tRiGgEr")
-	emit_signal("touchedMinigame", "test")
+func enteredTrigger(minigame: String) -> void:
+	emit_signal("touchedMinigame", minigame)
 	

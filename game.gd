@@ -68,7 +68,11 @@ func _on_multiplayer_spawner_spawned(node):
 		node.touchedMinigame.connect(activateMinigame)
 
 func activateMinigame(minigame) -> void:
-	print("TEST>TEST")
+	match minigame:
+		"Test":
+			print("param3 is 3!")
+		_:
+			print("param3 is not 3!")
 	minigames.show()
 
 func upnp_setup():

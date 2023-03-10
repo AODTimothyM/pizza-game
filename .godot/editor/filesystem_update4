@@ -7,3 +7,5 @@ res://Minigames/cleaning_tables_minigame.tscn
 res://Minigames/mess.tscn
 res://World/world.gd
 res://characterEditor.gd
+res://minigame_trigger.gd
+res://player.gd
