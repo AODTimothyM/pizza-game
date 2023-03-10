@@ -1,4 +1,5 @@
 res://game.tscn
+<<<<<<< HEAD
 res://game.gd
 res://player.tscn
 res://World/world.tscn
@@ -9,3 +10,5 @@ res://World/world.gd
 res://characterEditor.gd
 res://minigame_trigger.gd
 res://player.gd
+=======
+>>>>>>> 9103f175fa8cfa4a5bb49a8062aa56d09869edb2
