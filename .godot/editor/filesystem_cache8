@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1678377833
+::res://::1678453037
 characterEditor.gd::GDScript::-1::1678377814::0::1::::<>Control<>::
 FreddyLaugh.mp3::AudioStreamMP3::4308708176357918558::1678377814::1678377814::1::::<><>::
 game.gd::GDScript::-1::1678377814::0::1::::<>Node<>::
@@ -12,6 +12,14 @@ player.gd::GDScript::-1::1678377814::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::3244490311171965930::1678377814::0::1::::<><>::res://player.gd<>uid://djr86ospfdhvl<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
 README.md::TextFile::-1::1678377814::0::1::::<><>::
 TitleMenu.gd::GDScript::-1::1678377814::0::1::::<>Control<>::
+::res://Minigame Assets/::1678383270
+::res://Minigame Assets/Pizza Builder/::1678383283
+::res://Minigames/::1678389863
+cleaning_tables_minigame.gd::GDScript::-1::1678389863::0::1::::<>Node2D<>::
+cleaning_tables_minigame.tscn::PackedScene::4816593585079877257::1678389863::0::1::::<><>::res://Minigames/cleaning_tables_minigame.gd
+mess.gd::GDScript::-1::1678389863::0::1::::<>Sprite2D<>::
+mess.tscn::PackedScene::7385374178862246377::1678389863::0::1::::<><>::res://Minigames/mess.gd<>uid://dkfar7kgcv2vd
+pizza_builder_minigame.tscn::PackedScene::2614872543332750307::1678388423::0::1::::<><>::uid://dbcrjgwpa5t61
 ::res://Player/::1678377814
 Body.png::CompressedTexture2D::7828115849834677177::1678377814::1678377814::1::::<><>::
 Hair.png::CompressedTexture2D::1836170474545886570::1678377814::1678377814::1::::<><>::
