@@ -1,20 +1,9 @@
-<<<<<<< HEAD
 res://game.tscn
+res://game.gd
 res://player.tscn
 res://World/world.tscn
-res://MainMenu.gd
-res://game.gd
-res://TitleMenu.gd
-res://player.gd
-res://CharacterEditor.gd
-res://characterEditor.gd
 res://minigame_trigger.tscn
-res://minigame_trigger.gd
-res://node_2d.tscn
 res://Minigames/cleaning_tables_minigame.tscn
 res://Minigames/mess.tscn
-res://Minigames/mess.gd
-res://Minigames/cleaning_tables_minigame.gd
-=======
-res://Minigames/pizza_builder_minigame.tscn
->>>>>>> e5ac7ee5256297927145219dbb0b39cc28433008
+res://World/world.gd
+res://characterEditor.gd

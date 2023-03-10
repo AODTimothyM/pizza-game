@@ -8,7 +8,9 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	rng.randomize()
 	shrinkingTime = randi_range(1, 5) #rng.randi() % 5
-	print(shrinkingTime)
+	if rng.randi_range(1, 100) == 1:
+		print("Bad Stain")
+		shrinkingTime = 30
 	var randomSize = randf_range(.8, 1.2)
 	scale = Vector2(randomSize, randomSize)
 

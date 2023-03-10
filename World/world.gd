@@ -1,14 +1,15 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+signal nodeSpawned(node)
 
 func addPlayer(node: Node) -> void:
 	$YSort.add_child(node) 
+
+func removePlayer(peerID: int) -> void:
+	var player = $YSort.get_node_or_null(str(peerID))
+	if player:
+		print("PLAYER")
+		player.queue_free()
+		
+func _on_multiplayer_spawner_spawned(node):
+	emit_signal("nodeSpawned", node)

@@ -18,7 +18,6 @@ var colors = [Color(1.0, 0.0, 0.0, 1.0),
 
 func _ready():
 	if FileAccess.file_exists(savePath):
-		print("file found")
 		var file = FileAccess.open(savePath, FileAccess.READ)
 		var save = file.get_var()
 		
@@ -35,7 +34,7 @@ func _ready():
 		pants.modulate = save.pants
 		pantsColorPicker.color = save.pants
 	else:
-		print("file not found")
+		_on_random_pressed()
 
 func _on_shirt_color_color_changed(color):
 	shirt.modulate = color

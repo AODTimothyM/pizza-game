@@ -12,8 +12,7 @@ func _ready():
 		var marker = markers[randi() % markers.size()]
 		add_child(mess)
 		mess.global_position = marker.global_position
-		marker.queue_free()
-
+		markers.erase(marker)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
