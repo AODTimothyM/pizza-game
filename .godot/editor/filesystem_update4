@@ -1,12 +1,1 @@
 res://game.tscn
-<<<<<<< HEAD
-=======
-res://game.gd
-res://player.tscn
-res://World/world.tscn
-res://minigame_trigger.tscn
-res://Minigames/cleaning_tables_minigame.tscn
-res://Minigames/mess.tscn
-res://World/world.gd
-res://characterEditor.gd
->>>>>>> 69c6a0403b0737afa482acc235b9f671e0605307
