@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://bdiwtlqgqhxxb"]
+[gd_scene load_steps=17 format=3 uid="uid://bdiwtlqgqhxxb"]
 
 [ext_resource type="Texture2D" uid="uid://cdbukdvlaltle" path="res://Minigame Assets/Pizza Builder/Counter.png" id="1_fddgq"]
 [ext_resource type="Script" path="res://Minigames/pizza_builder_minigame.gd" id="1_pvoeg"]
+[ext_resource type="Texture2D" uid="uid://b77js6nwx74rb" path="res://Minigame Assets/Pizza Builder/Background.png" id="2_55umh"]
 [ext_resource type="Texture2D" uid="uid://bcwcpsrnutyn7" path="res://Minigame Assets/Pizza Builder/Pizza_Doughs.png" id="2_exboh"]
 [ext_resource type="Texture2D" uid="uid://6ts7qg5plfxn" path="res://Minigame Assets/Pizza Builder/Sauce_Container.png" id="3_52yi5"]
 [ext_resource type="Texture2D" uid="uid://cb17d721i6l3u" path="res://Minigame Assets/Pizza Builder/Cheese_Container.png" id="4_6six0"]
@@ -27,6 +28,11 @@ radius = 6.0
 
 [node name="Pizza Builder Minigame" type="Node2D"]
 script = ExtResource("1_pvoeg")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(320, 240)
+scale = Vector2(13.3333, 15)
+texture = ExtResource("2_55umh")
 
 [node name="Counter" type="Sprite2D" parent="."]
 position = Vector2(321.533, 242.8)
