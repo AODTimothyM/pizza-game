@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-Node2D
-Area2D
-CollisionShape2D
+Button
 Sprite2D
+Node2D
+CollisionShape2D
+Area2D
+Container
 Marker2D
-=======
 TileMap
->>>>>>> e5ac7ee5256297927145219dbb0b39cc28433008
 RigidBody2D
 StaticBody2D
 Control
@@ -16,7 +15,6 @@ Label
 VBoxContainer
 GridContainer
 ColorPicker
-Button
 TextureRect
 AudioStreamPlayer
 HSlider
@@ -32,8 +30,3 @@ Timer
 CharacterBody2D
 HSeparator
 VSeparator
-BoxContainer
-<<<<<<< HEAD
-=======
-MarginContainer
->>>>>>> e5ac7ee5256297927145219dbb0b39cc28433008

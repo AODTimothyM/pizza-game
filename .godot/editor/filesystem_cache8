@@ -1,127 +1,80 @@
 2a60927148abd1d33b818b535e306557
-<<<<<<< HEAD
-::res://::1678453037
-characterEditor.gd::GDScript::-1::1678377814::0::1::::<>Control<>::
-FreddyLaugh.mp3::AudioStreamMP3::4308708176357918558::1678377814::1678377814::1::::<><>::
-game.gd::GDScript::-1::1678377814::0::1::::<>Node<>::
-game.tscn::PackedScene::7902376607427238655::1678377814::0::1::::<><>::res://game.gd<>uid://c61lw41jbaum4<>res://TitleMenu.gd<>uid://djr86ospfdhvl<>res://characterEditor.gd<>uid://b2nf2abphfm43<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
-GirlLaugh.mp3::AudioStreamMP3::4118838165761431016::1678377814::1678377814::1::::<><>::
-icon.svg::CompressedTexture2D::7871504431197700417::1678377814::1678377814::1::::<><>::
-minigame_trigger.gd::GDScript::-1::1678377814::0::1::::<>Area2D<>::
-minigame_trigger.tscn::PackedScene::2994451125467288623::1678377814::0::1::::<><>::res://minigame_trigger.gd
-player.gd::GDScript::-1::1678377814::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::3244490311171965930::1678377814::0::1::::<><>::res://player.gd<>uid://djr86ospfdhvl<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
-README.md::TextFile::-1::1678377814::0::1::::<><>::
-TitleMenu.gd::GDScript::-1::1678377814::0::1::::<>Control<>::
-::res://Minigame Assets/::1678383270
-::res://Minigame Assets/Pizza Builder/::1678383283
-::res://Minigames/::1678389863
-cleaning_tables_minigame.gd::GDScript::-1::1678389863::0::1::::<>Node2D<>::
-cleaning_tables_minigame.tscn::PackedScene::4816593585079877257::1678389863::0::1::::<><>::res://Minigames/cleaning_tables_minigame.gd
-mess.gd::GDScript::-1::1678389863::0::1::::<>Sprite2D<>::
-mess.tscn::PackedScene::7385374178862246377::1678389863::0::1::::<><>::res://Minigames/mess.gd<>uid://dkfar7kgcv2vd
-pizza_builder_minigame.tscn::PackedScene::2614872543332750307::1678388423::0::1::::<><>::uid://dbcrjgwpa5t61
-::res://Player/::1678377814
-Body.png::CompressedTexture2D::7828115849834677177::1678377814::1678377814::1::::<><>::
-Hair.png::CompressedTexture2D::1836170474545886570::1678377814::1678377814::1::::<><>::
-Pants.png::CompressedTexture2D::1995022385357156648::1678377814::1678377814::1::::<><>::
-Sam.png::CompressedTexture2D::54724564288131618::1678377814::1678377814::1::::<><>::
-Shirt.png::CompressedTexture2D::3218020657289061960::1678377814::1678377814::1::::<><>::
-::res://Sample Sprites/::1678377814
-Bridge.png::CompressedTexture2D::6274253603461029618::1678377814::1678377814::1::::<><>::
-Canopy.png::CompressedTexture2D::273539837992226279::1678377814::1678377814::1::::<><>::
-Cliffs.png::CompressedTexture2D::3737049410075789229::1678377814::1678377814::1::::<><>::
-Flowers (Old).png::CompressedTexture2D::5386519921098939576::1678377814::1678377814::1::::<><>::
-Flowers.png::CompressedTexture2D::2557325953748933701::1678377814::1678377814::1::::<><>::
-Forest Tileset.png::CompressedTexture2D::2260475239712016158::1678377814::1678377814::1::::<><>::
-Forgotten Canopy.png::CompressedTexture2D::6624879557797000267::1678377814::1678377814::1::::<><>::
-Forgotten Leaves.png::CompressedTexture2D::8720802574412710019::1678377814::1678377814::1::::<><>::
-Forgotten Trunk.png::CompressedTexture2D::583890084833404056::1678377814::1678377814::1::::<><>::
-Forgotten.png::CompressedTexture2D::6022654690921318271::1678377814::1678377814::1::::<><>::
-Grass Background.png::CompressedTexture2D::3500719726118715573::1678377814::1678377814::1::::<><>::
-Hopscotch.png::CompressedTexture2D::6547794525684136671::1678377814::1678377814::1::::<><>::
-Leaves.png::CompressedTexture2D::4019736926534728740::1678377814::1678377814::1::::<><>::
-MyRoom.png::CompressedTexture2D::7111266950772981172::1678377814::1678377814::1::::<><>::
-Path.png::CompressedTexture2D::6297592111601384948::1678377814::1678377814::1::::<><>::
-PineTree.png::CompressedTexture2D::3883083178556292748::1678377814::1678377814::1::::<><>::
-Realm.png::CompressedTexture2D::502384157995066286::1678377814::1678377814::1::::<><>::
-RealmPathway.png::CompressedTexture2D::8574582255211108354::1678377814::1678377814::1::::<><>::
-Space.png::CompressedTexture2D::8789331806785426677::1678377814::1678377814::1::::<><>::
-Stairs.png::CompressedTexture2D::5918035803853185910::1678377814::1678377814::1::::<><>::
-Street.png::CompressedTexture2D::6819691295657482194::1678377814::1678377814::1::::<><>::
-Tree.png::CompressedTexture2D::1090059025295933405::1678377814::1678377814::1::::<><>::
-Trees.png::CompressedTexture2D::2779151638560531677::1678377814::1678377814::1::::<><>::
-Trunk.png::CompressedTexture2D::9138468783471547807::1678377814::1678377814::1::::<><>::
-Water1.png::CompressedTexture2D::7319116971591629445::1678377814::1678377814::1::::<><>::
-Water2.png::CompressedTexture2D::3637766613631260983::1678377814::1678377814::1::::<><>::
-Water3.png::CompressedTexture2D::7842730312216679744::1678377814::1678377814::1::::<><>::
-Water.png::CompressedTexture2D::2584679686162036033::1678377814::1678377814::1::::<><>::
-WilhelmActor.png::CompressedTexture2D::4202899879060138839::1678377814::1678377814::1::::<><>::
-::res://World/::1678377814
-Walls.png::CompressedTexture2D::7234628261056160596::1678377814::1678377814::1::::<><>::
-world.gd::GDScript::-1::1678377814::0::1::::<>Node2D<>::
-world.tscn::PackedScene::7003078079909446709::1678377814::0::1::::<><>::res://World/world.gd<>uid://dbcrjgwpa5t61<>uid://biwsf4ptvsyy6
-=======
-::res://::1678417684
-characterEditor.gd::GDScript::-1::1678341565::0::1::::<>Control<>::
-FreddyLaugh.mp3::AudioStreamMP3::4308708176357918558::1678214180::1678214222::1::::<><>::
-game.gd::GDScript::-1::1678417496::0::1::::<>Node<>::
-game.tscn::PackedScene::7902376607427238655::1678417496::0::1::::<><>::res://game.gd<>uid://c61lw41jbaum4<>res://TitleMenu.gd<>uid://djr86ospfdhvl<>res://characterEditor.gd<>uid://b2nf2abphfm43<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
-GirlLaugh.mp3::AudioStreamMP3::4118838165761431016::1678214253::1678214260::1::::<><>::
-icon.svg::CompressedTexture2D::7871504431197700417::1678127602::1678127620::1::::<><>::
-minigame_trigger.gd::GDScript::-1::1678386613::0::1::::<>Area2D<>::
-minigame_trigger.tscn::PackedScene::2994451125467288623::1678417467::0::1::::<><>::res://minigame_trigger.gd
-player.gd::GDScript::-1::1678386725::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::3244490311171965930::1678417467::0::1::::<><>::res://player.gd<>uid://djr86ospfdhvl<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
-README.md::TextFile::-1::1678134381::0::1::::<><>::
-TitleMenu.gd::GDScript::-1::1678339792::0::1::::<>Control<>::
-::res://Minigame Assets/::1678400179
-::res://Minigame Assets/Pizza Builder/::1678400179
-::res://Minigames/::1678417468
-cleaning_tables_minigame.gd::GDScript::-1::1678417173::0::1::::<>Node2D<>::
-cleaning_tables_minigame.tscn::PackedScene::4816593585079877257::1678417467::0::1::::<><>::res://Minigames/cleaning_tables_minigame.gd<>uid://c2tl05pw04wyw
-mess.gd::GDScript::-1::1678417436::0::1::::<>Sprite2D<>::
-mess.tscn::PackedScene::7385374178862246377::1678417468::0::1::::<><>::res://Minigames/mess.gd<>uid://dkfar7kgcv2vd
-pizza_builder_minigame.tscn::PackedScene::2614872543332750307::1678400179::0::1::::<><>::uid://dbcrjgwpa5t61
-TableMinigame.png::CompressedTexture2D::6707877454614990102::1678417218::1678416671::1::::<><>::
-::res://Player/::1678319090
-Body.png::CompressedTexture2D::7828115849834677177::1678247232::1678247237::1::::<><>::
-Hair.png::CompressedTexture2D::1836170474545886570::1678319089::1678319090::1::::<><>::
-Pants.png::CompressedTexture2D::1995022385357156648::1678244339::1678244339::1::::<><>::
-Sam.png::CompressedTexture2D::54724564288131618::1678155869::1678155869::1::::<><>::
-Shirt.png::CompressedTexture2D::3218020657289061960::1678243981::1678243981::1::::<><>::
-::res://Sample Sprites/::1678134992
-Bridge.png::CompressedTexture2D::6274253603461029618::1678134991::1678134992::1::::<><>::
-Canopy.png::CompressedTexture2D::273539837992226279::1678134991::1678134992::1::::<><>::
-Cliffs.png::CompressedTexture2D::3737049410075789229::1678134991::1678134992::1::::<><>::
-Flowers (Old).png::CompressedTexture2D::5386519921098939576::1678134991::1678134992::1::::<><>::
-Flowers.png::CompressedTexture2D::2557325953748933701::1678134991::1678134992::1::::<><>::
-Forest Tileset.png::CompressedTexture2D::2260475239712016158::1678134991::1678134992::1::::<><>::
-Forgotten Canopy.png::CompressedTexture2D::6624879557797000267::1678134991::1678134992::1::::<><>::
-Forgotten Leaves.png::CompressedTexture2D::8720802574412710019::1678134991::1678134992::1::::<><>::
-Forgotten Trunk.png::CompressedTexture2D::583890084833404056::1678134991::1678134992::1::::<><>::
-Forgotten.png::CompressedTexture2D::6022654690921318271::1678134991::1678134992::1::::<><>::
-Grass Background.png::CompressedTexture2D::3500719726118715573::1678134991::1678134992::1::::<><>::
-Hopscotch.png::CompressedTexture2D::6547794525684136671::1678134991::1678134992::1::::<><>::
-Leaves.png::CompressedTexture2D::4019736926534728740::1678134991::1678134992::1::::<><>::
-MyRoom.png::CompressedTexture2D::7111266950772981172::1678134991::1678134992::1::::<><>::
-Path.png::CompressedTexture2D::6297592111601384948::1678134991::1678134992::1::::<><>::
-PineTree.png::CompressedTexture2D::3883083178556292748::1678134991::1678134992::1::::<><>::
-Realm.png::CompressedTexture2D::502384157995066286::1678134991::1678134992::1::::<><>::
-RealmPathway.png::CompressedTexture2D::8574582255211108354::1678134991::1678134992::1::::<><>::
-Space.png::CompressedTexture2D::8789331806785426677::1678134991::1678134992::1::::<><>::
-Stairs.png::CompressedTexture2D::5918035803853185910::1678134991::1678134992::1::::<><>::
-Street.png::CompressedTexture2D::6819691295657482194::1678134991::1678134992::1::::<><>::
-Tree.png::CompressedTexture2D::1090059025295933405::1678134991::1678134992::1::::<><>::
-Trees.png::CompressedTexture2D::2779151638560531677::1678134991::1678134992::1::::<><>::
-Trunk.png::CompressedTexture2D::9138468783471547807::1678134991::1678134992::1::::<><>::
-Water1.png::CompressedTexture2D::7319116971591629445::1678134991::1678134992::1::::<><>::
-Water2.png::CompressedTexture2D::3637766613631260983::1678134991::1678134992::1::::<><>::
-Water3.png::CompressedTexture2D::7842730312216679744::1678134991::1678134992::1::::<><>::
-Water.png::CompressedTexture2D::2584679686162036033::1678134991::1678134992::1::::<><>::
-WilhelmActor.png::CompressedTexture2D::4202899879060138839::1678134991::1678134992::1::::<><>::
-::res://World/::1678417467
-Walls.png::CompressedTexture2D::7234628261056160596::1678241923::1678241924::1::::<><>::
-world.gd::GDScript::-1::1678140324::0::1::::<>Node2D<>::
-world.tscn::PackedScene::7003078079909446709::1678417467::0::1::::<><>::res://World/world.gd<>uid://dbcrjgwpa5t61<>uid://biwsf4ptvsyy6
->>>>>>> 69c6a0403b0737afa482acc235b9f671e0605307
+::res://::1679667406
+characterEditor.gd::GDScript::-1::1678461368::0::1::::<>Control<>::
+FreddyLaugh.mp3::AudioStreamMP3::4308708176357918558::1678381414::1678381414::1::::<><>::
+game.gd::GDScript::-1::1679486727::0::1::::<>Node<>::
+game.tscn::PackedScene::7902376607427238655::1679667406::0::1::::<><>::res://game.gd<>uid://c61lw41jbaum4<>res://TitleMenu.gd<>uid://djr86ospfdhvl<>res://characterEditor.gd<>uid://b2nf2abphfm43<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
+GirlLaugh.mp3::AudioStreamMP3::4118838165761431016::1678381414::1678381414::1::::<><>::
+icon.svg::CompressedTexture2D::7871504431197700417::1678381414::1678381414::1::::<><>::
+minigame_trigger.gd::GDScript::-1::1679486727::0::1::::<>Area2D<>::
+minigame_trigger.tscn::PackedScene::2994451125467288623::1678381414::0::1::::<><>::res://minigame_trigger.gd
+player.gd::GDScript::-1::1679486727::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::3244490311171965930::1678381414::0::1::::<><>::res://player.gd<>uid://djr86ospfdhvl<>uid://bl33lhs7hhtrs<>uid://3onyywjpq8au<>uid://1fppvee1py07
+README.md::TextFile::-1::1678381414::0::1::::<><>::
+TitleMenu.gd::GDScript::-1::1678381414::0::1::::<>Control<>::
+::res://Minigame Assets/::1678386870
+::res://Minigame Assets/Pizza Builder/::1679668234
+All_Sprites.png::CompressedTexture2D::1185404843663607988::1679573478::1679573482::1::::<><>::
+Cheese.png::CompressedTexture2D::8107413848504899175::1679668209::1679668238::1::::<><>::
+Cheese_Container.png::CompressedTexture2D::4898654057430197872::1679575437::1679575524::1::::<><>::
+Cheese_Drag.png::CompressedTexture2D::5457879107244366233::1679580546::1679580929::1::::<><>::
+Counter.png::CompressedTexture2D::4986704664359924798::1679576954::1679576956::1::::<><>::
+Dough.png::CompressedTexture2D::4190627394405434086::1679668144::1679668238::1::::<><>::
+Dough_Drag.png::CompressedTexture2D::3202032847053834857::1679592659::1679592670::1::::<><>::
+Pepperoni.png::CompressedTexture2D::6470658084489258672::1679668234::1679668238::1::::<><>::
+Pepperoni_Container.png::CompressedTexture2D::1981353435831556431::1679575467::1679575524::1::::<><>::
+Pepperoni_Drag.png::CompressedTexture2D::2469999158369186190::1679580850::1679580929::1::::<><>::
+Pizza_Doughs-export.png::CompressedTexture2D::6185520629686678300::1679582208::1679582218::1::::<><>::
+Pizza_Doughs.png::CompressedTexture2D::2572363874752727154::1679582202::1679582218::1::::<><>::
+Sauce.png::CompressedTexture2D::8948564089102563714::1679668179::1679668238::1::::<><>::
+Sauce_Container.png::CompressedTexture2D::2216228232406868151::1679575376::1679575524::1::::<><>::
+Sauce_Drag.png::CompressedTexture2D::3426905879426584247::1679580508::1679580929::1::::<><>::
+Topping_Drag.png::CompressedTexture2D::6790124454598030689::1679594484::1679594486::1::::<><>::
+::res://Minigames/::1679667406
+cleaning_tables_minigame.gd::GDScript::-1::1678461368::0::1::::<>Node2D<>::
+cleaning_tables_minigame.tscn::PackedScene::4816593585079877257::1678461368::0::1::::<><>::res://Minigames/cleaning_tables_minigame.gd<>uid://c2tl05pw04wyw
+mess.gd::GDScript::-1::1678461368::0::1::::<>Sprite2D<>::
+mess.tscn::PackedScene::7385374178862246377::1678393463::0::1::::<><>::res://Minigames/mess.gd<>uid://dkfar7kgcv2vd
+pizza_builder_minigame.gd::GDScript::-1::1679667395::0::1::::<>Node2D<>::
+pizza_builder_minigame.tscn::PackedScene::2614872543332750307::1679667406::0::1::::<><>::uid://cdbukdvlaltle<>res://Minigames/pizza_builder_minigame.gd<>uid://bcwcpsrnutyn7<>uid://6ts7qg5plfxn<>uid://cb17d721i6l3u<>uid://3h1uppvqjg12<>uid://c30gmfry7ioqj
+TableMinigame.png::CompressedTexture2D::6707877454614990102::1678461368::1678461368::1::::<><>::
+::res://Player/::1678381414
+Body.png::CompressedTexture2D::7828115849834677177::1678381414::1678381414::1::::<><>::
+Hair.png::CompressedTexture2D::1836170474545886570::1678381414::1678381414::1::::<><>::
+Pants.png::CompressedTexture2D::1995022385357156648::1678381414::1678381414::1::::<><>::
+Sam.png::CompressedTexture2D::54724564288131618::1678381414::1678381414::1::::<><>::
+Shirt.png::CompressedTexture2D::3218020657289061960::1678381414::1678381414::1::::<><>::
+::res://Sample Sprites/::1678381414
+Bridge.png::CompressedTexture2D::6274253603461029618::1678381414::1678381414::1::::<><>::
+Canopy.png::CompressedTexture2D::273539837992226279::1678381414::1678381414::1::::<><>::
+Cliffs.png::CompressedTexture2D::3737049410075789229::1678381414::1678381414::1::::<><>::
+Flowers (Old).png::CompressedTexture2D::5386519921098939576::1678381414::1678381414::1::::<><>::
+Flowers.png::CompressedTexture2D::2557325953748933701::1678381414::1678381414::1::::<><>::
+Forest Tileset.png::CompressedTexture2D::2260475239712016158::1678381414::1678381414::1::::<><>::
+Forgotten Canopy.png::CompressedTexture2D::6624879557797000267::1678381414::1678381414::1::::<><>::
+Forgotten Leaves.png::CompressedTexture2D::8720802574412710019::1678381414::1678381414::1::::<><>::
+Forgotten Trunk.png::CompressedTexture2D::583890084833404056::1678381414::1678381414::1::::<><>::
+Forgotten.png::CompressedTexture2D::6022654690921318271::1678381414::1678381414::1::::<><>::
+Grass Background.png::CompressedTexture2D::3500719726118715573::1678381414::1678381414::1::::<><>::
+Hopscotch.png::CompressedTexture2D::6547794525684136671::1678381414::1678381414::1::::<><>::
+Leaves.png::CompressedTexture2D::4019736926534728740::1678381414::1678381414::1::::<><>::
+MyRoom.png::CompressedTexture2D::7111266950772981172::1678381414::1678381414::1::::<><>::
+Path.png::CompressedTexture2D::6297592111601384948::1678381414::1678381414::1::::<><>::
+PineTree.png::CompressedTexture2D::3883083178556292748::1678381414::1678381414::1::::<><>::
+Realm.png::CompressedTexture2D::502384157995066286::1678381414::1678381414::1::::<><>::
+RealmPathway.png::CompressedTexture2D::8574582255211108354::1678381414::1678381414::1::::<><>::
+Space.png::CompressedTexture2D::8789331806785426677::1678381414::1678381414::1::::<><>::
+Stairs.png::CompressedTexture2D::5918035803853185910::1678381414::1678381414::1::::<><>::
+Street.png::CompressedTexture2D::6819691295657482194::1678381414::1678381414::1::::<><>::
+Tree.png::CompressedTexture2D::1090059025295933405::1678381414::1678381414::1::::<><>::
+Trees.png::CompressedTexture2D::2779151638560531677::1678381414::1678381414::1::::<><>::
+Trunk.png::CompressedTexture2D::9138468783471547807::1678381414::1678381414::1::::<><>::
+Water1.png::CompressedTexture2D::7319116971591629445::1678381414::1678381414::1::::<><>::
+Water2.png::CompressedTexture2D::3637766613631260983::1678381414::1678381414::1::::<><>::
+Water3.png::CompressedTexture2D::7842730312216679744::1678381414::1678381414::1::::<><>::
+Water.png::CompressedTexture2D::2584679686162036033::1678381414::1678381414::1::::<><>::
+WilhelmActor.png::CompressedTexture2D::4202899879060138839::1678381414::1678381414::1::::<><>::
+::res://World/::1679486727
+Walls.png::CompressedTexture2D::7234628261056160596::1678381414::1678381414::1::::<><>::
+world.gd::GDScript::-1::1678461368::0::1::::<>Node2D<>::
+world.tscn::PackedScene::7003078079909446709::1679486727::0::1::::<><>::res://World/world.gd<>uid://dbcrjgwpa5t61<>uid://biwsf4ptvsyy6
