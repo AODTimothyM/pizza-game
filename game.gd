@@ -6,6 +6,9 @@ extends Node
 @onready var minigames = $CanvasLayer/Minigames
 @onready var health_bar = null
 
+@onready var tablesMinigame = $CanvasLayer/Minigames/CleaningTablesMinigame
+@onready var drivingMinigame = $CanvasLayer/Minigames/DrivingMinigame
+
 var savePath = "user://pizza.manic"
 const Player = preload("res://player.tscn") #preload("res://Player/player.tscn")
 const PORT = 9999
@@ -58,6 +61,7 @@ func add_player(peer_id):
 	if player.is_multiplayer_authority():
 		print("Host signal connected")
 		player.touchedMinigame.connect(activateMinigame)
+		player.escapedMinigame.connect(deactivateMinigame)
 
 func remove_player(peer_id):
 	$World.removePlayer(peer_id)
@@ -66,14 +70,31 @@ func _on_multiplayer_spawner_spawned(node):
 	if node.is_multiplayer_authority():
 		print("Client signal connected")
 		node.touchedMinigame.connect(activateMinigame)
+		node.escapedMinigame.connect(deactivateMinigame)
 
-func activateMinigame(minigame) -> void:
+func activateMinigame(player: CharacterBody2D, minigame: String, trigger: Area2D) -> void:
 	match minigame:
-		"Test":
-			print("param3 is 3!")
+		"Cleaning Tables":
+			tablesMinigame.newGame()
+			tablesMinigame.minigameCompleted.connect(trigger.queue_free)
+			tablesMinigame.show()
+		"Driving":
+			player.deactivate()
+			drivingMinigame.newGame()
+			drivingMinigame.show()
 		_:
-			print("param3 is not 3!")
+			print("No minigame found.")
+			return
 	minigames.show()
+	
+func deactivateMinigame(_player: CharacterBody2D, minigame: String, _trigger: Area2D) -> void:
+	match minigame:
+		"Cleaning Tables":
+			tablesMinigame.hide()
+		_:
+			print("No minigame found.")
+			return
+	minigames.hide()
 
 func upnp_setup():
 	var upnp = UPNP.new()
@@ -83,12 +104,12 @@ func upnp_setup():
 		"UPNP Discover Failed! Error %s" % discover_result)
 	
 	#print(upnp.get_gateway())
-#	assert(upnp.get_gateway() and upnp.get_gateway().is_valid_gateway(), \
-#		"UPNP Invalid Gateway!")
+	assert(upnp.get_gateway() and upnp.get_gateway().is_valid_gateway(), \
+		"UPNP Invalid Gateway!")
 
 	var map_result = upnp.add_port_mapping(PORT)
-#	assert(map_result == UPNP.UPNP_RESULT_SUCCESS, \
-#		"UPNP Port Mapping Failed! Error %s" % map_result)
+	assert(map_result == UPNP.UPNP_RESULT_SUCCESS, \
+		"UPNP Port Mapping Failed! Error %s" % map_result)
 	
 	print("Success! Join Address: %s" % upnp.query_external_address())
 

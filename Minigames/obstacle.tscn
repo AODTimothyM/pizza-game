@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp7yfeg8qbht"]
+
+[ext_resource type="Script" path="res://Minigames/obstacle.gd" id="1_ylq1m"]
+[ext_resource type="Texture2D" uid="uid://c8gl31ial0lnw" path="res://Minigames/Car.png" id="2_gytcu"]
+
+[node name="Obstacle" type="Node2D"]
+script = ExtResource("1_ylq1m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0.87451, 1)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_gytcu")
+flip_h = true

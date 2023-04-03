@@ -4,10 +4,12 @@ extends Sprite2D
 var shrinking = false
 var mouseHovering = false
 var rng = RandomNumberGenerator.new()
+signal cleanedUp
 
 func _ready():
 	rng.randomize()
 	shrinkingTime = randi_range(1, 5) #rng.randi() % 5
+	
 	if rng.randi_range(1, 100) == 1:
 		print("Bad Stain")
 		shrinkingTime = 30
@@ -26,14 +28,15 @@ func _process(delta):
 		scale.x -= delta/shrinkingTime
 		scale.y -= delta/shrinkingTime
 		if scale.x <= 0.05:
-			self.queue_free()
+			emit_signal("cleanedUp")
+			queue_free()
 
-func _on_area_2d_input_event(viewport, event, shape_idx):
-	return
-	if event is InputEventMouseMotion and shape_idx == 0:
-		shrinking = true
-	elif event is InputEventMouseButton and shape_idx == 0:
-		shrinking = false
+#func _on_area_2d_input_event(_viewport, event, shape_idx):
+#	return
+#	if event is InputEventMouseMotion and shape_idx == 0:
+#		shrinking = true
+#	elif event is InputEventMouseButton and shape_idx == 0:
+#		shrinking = false
 
 
 func _on_area_2d_mouse_entered():

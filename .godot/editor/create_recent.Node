@@ -1,17 +1,19 @@
-<<<<<<< HEAD
-Node2D
-Area2D
-CollisionShape2D
-Sprite2D
 Marker2D
-=======
-TileMap
->>>>>>> e5ac7ee5256297927145219dbb0b39cc28433008
-RigidBody2D
+Timer
+Node2D
+Sprite2D
+CollisionShape2D
 StaticBody2D
-Control
+CharacterBody2D
 ColorRect
 CanvasModulate
+Camera2D
+ParallaxLayer
+ParallaxBackground
+Area2D
+TileMap
+RigidBody2D
+Control
 Label
 VBoxContainer
 GridContainer
@@ -27,13 +29,4 @@ LineEdit
 AnimationPlayer
 MultiplayerSpawner
 MultiplayerSynchronizer
-Camera2D
-Timer
-CharacterBody2D
 HSeparator
-VSeparator
-BoxContainer
-<<<<<<< HEAD
-=======
-MarginContainer
->>>>>>> e5ac7ee5256297927145219dbb0b39cc28433008

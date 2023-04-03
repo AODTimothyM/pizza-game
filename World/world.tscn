@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://World/world.gd" id="1_24kh5"]
 [ext_resource type="Texture2D" uid="uid://dbcrjgwpa5t61" path="res://World/Walls.png" id="2_sfyvp"]
-[ext_resource type="PackedScene" uid="uid://biwsf4ptvsyy6" path="res://minigame_trigger.tscn" id="3_iruy0"]
+[ext_resource type="PackedScene" uid="uid://d2qcyyfaoie74" path="res://minigame_trigger.tscn" id="3_iruy0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_the32"]
 texture = ExtResource("2_sfyvp")
@@ -315,7 +315,31 @@ spawn_path = NodePath("../YSort")
 position = Vector2(64, -168)
 
 [node name="MinigameTrigger2" parent="." instance=ExtResource("3_iruy0")]
-position = Vector2(-336, 184)
+position = Vector2(-72, 40)
 minigame = "Cleaning Tables"
+
+[node name="MinigameTrigger3" parent="." instance=ExtResource("3_iruy0")]
+position = Vector2(-112, 40)
+minigame = "Cleaning Tables"
+
+[node name="MinigameTrigger4" parent="." instance=ExtResource("3_iruy0")]
+position = Vector2(-112, 56)
+minigame = "Cleaning Tables"
+
+[node name="MinigameTrigger5" parent="." instance=ExtResource("3_iruy0")]
+position = Vector2(-112, 72)
+minigame = "Cleaning Tables"
+
+[node name="MinigameTrigger6" parent="." instance=ExtResource("3_iruy0")]
+position = Vector2(-112, 88)
+minigame = "Cleaning Tables"
+
+[node name="MinigameTrigger7" parent="." instance=ExtResource("3_iruy0")]
+position = Vector2(-112, 104)
+minigame = "Cleaning Tables"
+
+[node name="MinigameTrigger8" parent="." instance=ExtResource("3_iruy0")]
+position = Vector2(64, 40)
+minigame = "Driving"
 
 [connection signal="spawned" from="MultiplayerSpawner" to="." method="_on_multiplayer_spawner_spawned"]

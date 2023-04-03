@@ -5,7 +5,8 @@ extends CharacterBody2D
 @export var friction = 500
 
 enum {
-	walk
+	walk,
+	idle
 }
 
 var state = walk
@@ -18,7 +19,8 @@ var state = walk
 @onready var hair = $Sprites/Hair
 #@onready var walkEffect = $Walk
 
-signal touchedMinigame(minigame)
+signal touchedMinigame(player: CharacterBody2D, minigame: String, trigger: Area2D)
+signal escapedMinigame(player: CharacterBody2D, minigame: String, trigger: Area2D)
 
 var savePath = "user://pizza.manic"
 
@@ -60,6 +62,8 @@ func _physics_process(delta):
 	match state:
 		walk:
 			walkState(delta)
+		idle:
+			pass
 
 func walkState(delta):
 	var Input_vector = get_input()
@@ -77,6 +81,14 @@ func walkState(delta):
 		
 	move_and_slide()
 	
-func enteredTrigger(minigame: String) -> void:
-	emit_signal("touchedMinigame", minigame)
+func enteredTrigger(minigame: String, trigger: Area2D) -> void:
+	emit_signal("touchedMinigame", self, minigame, trigger)
 	
+func exitedTrigger(minigame: String, trigger: Area2D) -> void:
+	emit_signal("escapedMinigame", self, minigame, trigger)
+	
+func activate() -> void:
+	state = walk
+	
+func deactivate() -> void:
+	state = idle

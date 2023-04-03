@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkt78ulextkh8"]
+[gd_scene load_steps=11 format=3 uid="uid://u28f4xcsguub"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_uh6l4"]
 [ext_resource type="PackedScene" uid="uid://c61lw41jbaum4" path="res://World/world.tscn" id="2_km0gu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bl33lhs7hhtrs" path="res://Player/Shirt.png" id="5_80447"]
 [ext_resource type="Texture2D" uid="uid://3onyywjpq8au" path="res://Player/Pants.png" id="6_ijcib"]
 [ext_resource type="Texture2D" uid="uid://1fppvee1py07" path="res://Player/Hair.png" id="8_o40i7"]
+[ext_resource type="PackedScene" uid="uid://dbj00vip8sbs6" path="res://Minigames/minigames.tscn" id="9_jitkl"]
 
 [node name="Game" type="Node"]
 editor_description = "172.17.26.62"
@@ -344,15 +345,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Minigames" type="Node2D" parent="CanvasLayer"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Minigames"]
-offset_left = 120.0
-offset_top = 112.0
-offset_right = 448.0
-offset_bottom = 336.0
-color = Color(0.176471, 0, 1, 1)
+[node name="Minigames" parent="CanvasLayer" instance=ExtResource("9_jitkl")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_qgls4")

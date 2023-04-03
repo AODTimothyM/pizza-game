@@ -1,14 +1,8 @@
 res://game.tscn
-<<<<<<< HEAD
-res://game.gd
-res://player.tscn
 res://World/world.tscn
-res://minigame_trigger.tscn
+res://player.tscn
 res://Minigames/cleaning_tables_minigame.tscn
-res://Minigames/mess.tscn
-res://World/world.gd
-res://characterEditor.gd
-res://minigame_trigger.gd
-res://player.gd
-=======
->>>>>>> 9103f175fa8cfa4a5bb49a8062aa56d09869edb2
+res://Minigames/driving_minigame.tscn
+res://Minigames/car.tscn
+res://Minigames/obstacle.tscn
+res://game.gd

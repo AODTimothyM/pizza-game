@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn561tv02xw0m"]
+
+[ext_resource type="Script" path="res://Minigames/driving_minigame.gd" id="1_omseq"]
+[ext_resource type="Texture2D" uid="uid://bcbdsx1ob30cs" path="res://Minigames/Road.png" id="2_kdmsf"]
+[ext_resource type="PackedScene" uid="uid://c7s84yqlr3a2" path="res://Minigames/car.tscn" id="3_7xklu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pi6fc"]
+size = Vector2(40, 16)
+
+[node name="DrivingMinigame" type="Node2D"]
+script = ExtResource("1_omseq")
+
+[node name="Sprites" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Road" type="Sprite2D" parent="Sprites"]
+position = Vector2(160, 120)
+texture = ExtResource("2_kdmsf")
+
+[node name="Car" parent="." instance=ExtResource("3_7xklu")]
+position = Vector2(72, 392)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(72, 280)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_pi6fc")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(72, 456)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_pi6fc")
+
+[node name="TopMarker" type="Marker2D" parent="."]
+position = Vector2(704, 312)
+
+[node name="BottomMarker" type="Marker2D" parent="."]
+position = Vector2(704, 400)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

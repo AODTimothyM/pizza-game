@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://biwsf4ptvsyy6"]
+[gd_scene load_steps=3 format=3 uid="uid://d2qcyyfaoie74"]
 
-[ext_resource type="Script" path="res://minigame_trigger.gd" id="1_7s1jn"]
+[ext_resource type="Script" path="res://Minigames/minigame_trigger.gd" id="1_nyk3u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vokk"]
 size = Vector2(32, 16)
@@ -8,9 +8,10 @@ size = Vector2(32, 16)
 [node name="MinigameTrigger" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_7s1jn")
+script = ExtResource("1_nyk3u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3vokk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
