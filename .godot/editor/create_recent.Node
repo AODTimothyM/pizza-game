@@ -3,6 +3,15 @@ Timer
 Node2D
 Sprite2D
 CollisionShape2D
+Sprite2D
+Button
+Node2D
+CollisionShape2D
+Area2D
+Container
+Marker2D
+TileMap
+RigidBody2D
 StaticBody2D
 CharacterBody2D
 ColorRect
@@ -18,7 +27,6 @@ Label
 VBoxContainer
 GridContainer
 ColorPicker
-Button
 TextureRect
 AudioStreamPlayer
 HSlider
@@ -30,3 +38,7 @@ AnimationPlayer
 MultiplayerSpawner
 MultiplayerSynchronizer
 HSeparator
+<<<<<<< HEAD
+=======
+VSeparator
+>>>>>>> 3c6e7f1e11aca40adf14aac56751efdee6b948cc
